@@ -5,26 +5,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/r/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Payment Form</title>
+
+    <style>
+    
+    body {
+    padding: 0;
+    margin: 0px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(247, 247, 247);
+    line-height: 1.6;
+    background-image: url('img/nic.jpg');
+    background-color: rgb(66, 67, 126);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    font-size: 20px;
+    }
+      .li2{
+        list-style: none;
+        margin: 5px 5px;
+        display: inline-block;
+        font-size: 18px;
+        padding: 6px 9px;
+        background-color: rgba(0, 0, 0, 0.322);
+        border-radius: 10%;
+        text-align: center;
+        padding: 4px 10px;
+        float: right;
+    }
+    .li1{
+      list-style: none;
+      margin: 5px 5px;
+      display: inline-block;
+      font-size: 20px;
+      padding: 5px 1px;
+      background-color: rgba(0, 0, 0, 0.322);
+      border-radius: 10%;
+      text-align: center;
+      padding: 4px 10px;
+      float: left;
+    }
+    .Form-wrap{
+    background-color: rgba(212, 206, 206, 0.253);
+    overflow: hidden;
+    border: 1px solid rgba(136, 127, 127, 0.61);
+    font-size: 5px;
+    text-decoration: none;
+    }
+    .Form-wrap li{
+    display: block;
+    }
+    table, th, td {
+  border: 4px solid rgba(255, 255, 255, 0.158);
+  border-collapse: collapse;
+  }
+  .text-center{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+  li:hover{
+    color: #6e16b6;
+    border:1px solid #5f4c4c;
+    transition: .5s;
+  } 
+  .custombtn{
+    background-color: grey;
+    border: 1px black;
+    padding: 5px 10px;
+    border-radius: 8%;
+    margin-bottom: 2px;
+  }
+  .custombtn:hover{
+    color: rgba(255, 254, 254, 0.616);
+    background-color: rgba(100, 96, 96, 0.171);
+  }
+    </style>
 </head>
  
 <body>
-    <div class="Form-wrap">
-       <h4>&nbsp;&nbsp;</h4>
-       <p><i class="fa fa-globe" aria-hidden="true"></i></p>
-       <h4>&nbsp;&nbsp;</h4>
-       <p>Dominic Symon B. Lee</p>
-       <h4>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</h4>
-        <p>Contact</p>
-        <h4>&nbsp;&nbsp;</h4>
-        <p><i class="fa fa-phone" aria-hidden="true"></i></p>
-     </div>               
-     <br><br><br>
-     <h4>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</h4>
-     <div class="Form-wrap2">
-        <button class="button">New <i class="fa fa-plus" aria-hidden="true"></i></button>
-     </div>
+    <nav class="Form-wrap">
+       <ul>
+        <li class="li1">World.eu</li>
+        <li class="li2"><i class="fa fa-phone" aria-hidden="true"></i></li>
+        <li class="li2">Contact</li>
+        <li class="li2">Dominic Symon B. Lee</li>
+        <li class="li1"><a href="index.html"><i class="fa fa-globe" aria-hidden="true"></i></li></a>
+     </nav>               
+     <br>
+     <br>
+     <div class="container mt-5">
+        <button type="button" class="btn btn-primary custombtn" style="float: left;" data-bs-toggle="modal" data-bs-target="#newCustomer" style="background-color:grey !important">New <i class="fa fa-plus" aria-hidden="true"></i></button>
+  
+            <div class="modal fade" id="newCustomer" data-bs-backdrop="static" style="padding-right: 500px; padding-top: 200px;" data-bs-keyboard="false" tabindex="-1" aria-labelledby="newCustomerLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content" style="width: 1000px; background-color: white">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="newCustomerLabel" style="color: white;">New Order</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="">
+                        <input type="text" class="form-control" style="padding-left: 5px;" placeholder="OR Number" style="width: 20%;" id="ORNumber">
+                        <input type="text" class="form-control" style="padding-left: 5px;" placeholder="Customer Name (must have a First Name and Last Name)" id="customerName" style="width: 70%;">            
+                    </form>
+                  </div>
+                  <div class="modal-body">
+                      <hr style="margin-top : 0;">
+                    <form action="">
+                        <h3 class="itemTxt">Items</h3>
+                        <div class="row">
+                            <div class="col-3">
+                              <select name="item1" id="item1" style="height: 100%;" disabled>
+                                  <option value="" selected disabled> </option>
+                              </select>
+                            </div>
+                            <div class="col-3">
+                              <input type="text" class="form-control" placeholder="Price" id="price1" disabled>
+                            </div>
+                            <div class="col-3">
+                              <input type="number" min="0" class="form-control" placeholder="Qty" id="qty1" disabled>
+                            </div>
+                            <div class="col-3">
+                              <input type="text" class="form-control" placeholder="Subtotal" id="subtotal1" disabled>
+                            </div>
+                        </div>       
+                        <div class="row">
+                            <div class="col-3">
+                              <select name="item2" id="item2" style="height: 100%;" disabled>
+                                  <option value="" selected disabled> </option>
+                               
+                              </select>
+                            </div>
+                            <div class="col-3">
+                              <input type="text" class="form-control" placeholder="Price" id="price2" disabled>
+                            </div>
+                            <div class="col-3">
+                              <input type="number" min="0" class="form-control" placeholder="Qty" id="qty2" disabled>
+                            </div>
+                            <div class="col-3">
+                              <input type="text" class="form-control" placeholder="Subtotal" id="subtotal2" disabled>
+                            </div>
+                        </div>       
+                        <div class="row">
+                            <div class="col-3">
+                              <select name="item3" id="item3" style="height: 100%;" disabled>
+                                  <option value="" selected disabled> </option>
+                              </select>
+                            </div>
+                            <div class="col-3">
+                              <input type="text" class="form-control" placeholder="Price" id="price3" disabled>
+                            </div>
+                            <div class="col-3">
+                              <input type="number" min="0" class="form-control" placeholder="Qty" id="qty3" disabled>
+                            </div>
+                            <div class="col-3">
+                              <input type="text" class="form-control" placeholder="Subtotal" id="subtotal3" disabled >
+                            </div>
+                        </div>       
+                        <div class="row">
+                            <div class="col-3">
+                              <select name="item4" id="item4" style="height: 100%;" disabled>
+                                  <option value="" selected disabled> </option>
+                              </select>
+                            </div>
+                            <div class="col-3">
+                              <input type="text" class="form-control" placeholder="Price" id="price4" disabled>
+                            </div>
+                            <div class="col-3">
+                              <input type="number" min="0" class="form-control" placeholder="Qty" id="qty4" disabled>
+                            </div>
+                            <div class="col-3">
+                              <input type="text" class="form-control" placeholder="Subtotal" id="subtotal4" disabled>
+                            </div>
+                        </div>       
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="save" style="background-color: #0b5ed7; font-weight: bold; " disabled data-bs-dismiss="modal">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+      <table class="table table" id="displayTable" style="color: white;">
+                <tr class="tableItems" style="color: white; background-color: #ffffff28;" >
+                    <th scope="row" class="text-center">#</th>
+                    <th scope="row" class="text-center">Order #</th>
+                    <th scope="row" class="text-center">Customer Name</th>
+                    <th scope="row" class="text-center">Total</th>
+                    <th scope="row" class="text-center">Actions</th>
+                </tr>
+            </table>
+            
+            <div class="modal fade" id="viewItem" tabindex="-1" aria-labelledby="viewItemLabel" aria-hidden="true" style="padding-right: 500px;">
+              <div class="modal-dialog">
+                <div class="modal-content" style="width: 1000px; background-color: #232123">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="viewItemLabel" style="color: white;">View Order</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="">
+                      <input type="text" class="form-control" placeholder="OR Number" style="width: 100%;" id="ORNumberView" disabled>
+                      <input type="text" class="form-control" placeholder="Customer Name" id="customerNameView" disabled>            
+                    </form>                  
+                  </div>
+  
+                  <div class="modal-body">
+                    <hr>
+                    <h3 style="color: white;">Items</h3>
+                    <div class="container">
+                      <div class="row" id="viewItemBody" style="width: 100%; justify-content: space-around; align-items: center; display: flex;">
+                      </div>
+                    </div>
+                    <br>
+                    <br>
+                  </div>
+                </div>
+              </div>
+      </div>
+      </div>
+ 
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/val.js"></script>
+    <script src="js/LS.js"></script>
+    <script src="js/DT.js"></script>
+    <script src="js/VO.js"></script>
 </body>
 </html>
